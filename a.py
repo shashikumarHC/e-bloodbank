@@ -167,6 +167,8 @@ def stk_a():
     stke2.place(x=140,y=355)
     b=Button(stkroot,text="ADD STOCK",width="20",font=("arial bold",20),bg="black",fg="white",command=add_stk)
     b.place(x=150,y=450)
+    btn=Button(stkroot,text="BACK",width="10",font=("arial bold",15),bg="black",fg="white",command=stkroot.destroy)
+    btn.place(x=550,y=30)
     stkroot.mainloop()
 def approve():
     a=l_id.get()
@@ -223,6 +225,8 @@ def lab():
     for i in data:
         tree.insert("",'end',values=i)
     tree.pack()
+    btn=Button(labroot,text="BACK",width="10",font=("arial bold",20),bg="black",fg="white",command=labroot.destroy)
+    btn.place(x=1300,y=40)
     labroot.mainloop()
 def admin():
     droot=Tk()
@@ -293,6 +297,8 @@ def admin():
     dbtn2.place(x=600,y=700)
     dbtn3=Button(droot,text="View Seeker's",height=1,font=("arial bold",20),bg="black",fg="white",command=seekers)
     dbtn3.place(x=1200,y=700)
+    btn=Button(droot,text="BACK",width="10",font=("arial bold",20),bg="black",fg="white",command=droot.destroy)
+    btn.place(x=1300,y=40)
     droot.mainloop()
 
 def view():
@@ -322,6 +328,8 @@ def view():
     for i in data:
         tree.insert("",'end',values=i)
     tree.pack()
+    btn=Button(vroot,text="BACK",width="10",font=("arial bold",20),bg="black",fg="white",command=vroot.destroy)
+    btn.place(x=1000,y=40)
     vroot.mainloop()
 def db_adduser():
     a=ue1.get()
@@ -392,6 +400,8 @@ def add_user():
     tree.pack()
     ubtn4=Button(uroot,text="REMOVE USER",height=1,font=("arial bold",20),bg="black",fg="white",command=del_user)
     ubtn4.place(x=950,y=640)
+    btn=Button(uroot,text="BACK",width="10",font=("arial bold",20),bg="black",fg="white",command=uroot.destroy)
+    btn.place(x=1000,y=40)
     uroot.mainloop()
 def del_user():
     global delroot,due2
@@ -455,6 +465,8 @@ def seekers():
     for i in data1:
         tree.insert("",'end',values=i)
     tree.pack()
+    btn=Button(s1root,text="BACK",width="10",font=("arial bold",20),bg="black",fg="white",command=s1root.destroy)
+    btn.place(x=1000,y=30)
     s1root.mainloop()
 def doner():
     global root,a_name,a_address,a_age,a_bgrp,a_mail,a_uname,a_num,a_pass
@@ -503,7 +515,8 @@ def doner():
     abtn.place(x=750,y=500)
     abtn1=Button(root,text="SIGN IN",width="25",font=("arial bold",20),bg="black",fg="white",command=login)
     abtn1.place(x=750,y=570)
-
+    btn=Button(root,text="BACK",width="10",font=("arial bold",20),bg="black",fg="white",command=root.destroy)
+    btn.place(x=1300,y=15)
 
     root.mainloop()
 def fn():
@@ -634,6 +647,8 @@ def donor():
         dn16name = Label(dnroot, text='2.Blood pressure',font = ("times new roman",20,"bold"),bg="lightblue" ).place(x=900,y=575)
         dn17name = Label(dnroot, text='3.Body temperature',font = ("times new roman",20,"bold"),bg="lightblue" ).place(x=900,y=615)
         dn18name = Label(dnroot, text='4.Hemoglobin levels',font = ("times new roman",20,"bold"),bg="lightblue" ).place(x=900,y=655)
+        btn=Button(dnroot,text="BACK",width="10",font=("arial bold",20),bg="black",fg="white",command=dnroot.destroy)
+        btn.place(x=1300,y=40)
         dnroot.mainloop()
 def distubution(c,d):
     op=[1,5]
@@ -801,6 +816,8 @@ def seekers_a():
     for i in data:
         tree.insert("",'end',values=i)
     tree.pack()
+    btn=Button(sroot,text="BACK",width="10",font=("arial bold",20),bg="black",fg="white",command=sroot.destroy)
+    btn.place(x=1300,y=40)
     sroot.mainloop()
 a2root.configure(bg="red4")
 lab1=Label(a2root,text="WELCOME TO BLOOD BANK",font=("arial bold",65),fg="white",bg="red4")
@@ -836,4 +853,3 @@ lab2.place(x=1000,y=720)
 
 
 a2root.mainloop()
-
